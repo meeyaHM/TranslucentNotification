@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Notification Alpha</string>
+			<key>footerText</key>
+      <string>0 = Transparent | 1 = Default</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<real>0.5</real>
+			<key>defaults</key>
+			<string>com.1conan.translucentnotification</string>
+			<key>min</key>
+			<integer>0</integer>
+			<key>max</key>
+			<integer>1</integer>
+			<key>showValue</key>
+			<true/>
+			<key>key</key>
+			<string>AlphaKey</string>
+			<key>id</key>
+			<string>AlphaKey</string>
+			<key>label</key>
+			<string>Opacity</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Apply Settings</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Apply Settings (Respring)</string>
+			<key>action</key>
+			<string>confirmRespring</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Developer</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>1Conan</string>
+			<key>action</key>
+			<string>developerLink</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>TranslucentNotification</string>
+</dict>
+</plist>
