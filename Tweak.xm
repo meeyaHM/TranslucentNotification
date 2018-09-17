@@ -6,6 +6,11 @@ float cAlphaKey;
 -(void)setBackgroundView:(id)arg1;
 @end
 
+@interface FBSystemService
++(id)sharedInstance;
+-(void)exitAndRelaunch:(BOOL)arg1;
+@end
+
 %hook NCNotificationShortLookView
 -(void)setBackgroundView:(id)arg1 {
 	NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:PLIST_PATH];
@@ -14,3 +19,20 @@ float cAlphaKey;
 	%orig;
 }
 %end
+
+void respring() {
+	[[%c(FBSystemService) sharedInstance] exitAndRelaunch:YES];
+}
+
+%ctor {
+	%init();
+	
+	CFNotificationCenterAddObserver(
+		CFNotificationCenterGetDarwinNotifyCenter(), 
+		NULL, 
+		(CFNotificationCallback)respring, 
+		(CFStringRef)@"com.1conan.translucentnotif/respring", 
+		NULL, 
+		CFNotificationSuspensionBehaviorDeliverImmediately
+	);
+}

@@ -1,4 +1,5 @@
 #include "TranslucentNCRootListController.h"
+#include <notify.h>
 
 @implementation TranslucentNCRootListController
 
@@ -18,7 +19,7 @@
 }
 
 -(void)respring {
-	system("killall -9 SpringBoard");
+	notify_post("com.1conan.translucentnotif/respring");
 }
 
 -(void)confirmRespring {

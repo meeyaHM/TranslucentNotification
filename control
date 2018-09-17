@@ -1,7 +1,7 @@
 Package: com.1conan.translucenttnotif
 Name: TranslucentNotification
-Depends: mobilesubstrate
-Version: 1.0.0
+Depends: mobilesubstrate, firmware (>= 11.0)
+Version: 1.0.1
 Architecture: iphoneos-arm
 Description: Make your notifications translucent.
 Maintainer: 1Conan
